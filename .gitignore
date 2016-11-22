@@ -135,3 +135,4 @@ Temporary Items
 #My stuff
 lib/configs/configs.yml
 .dev.env
+.idea
