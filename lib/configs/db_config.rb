@@ -2,8 +2,8 @@ require 'pg'
 require 'load_config'
 
 module DBConfig
-  def DBConfig.con
 
+  def DBConfig.con
     config = DBConfig.config_setup
     PG.connect(
         :user => config[:db_user],

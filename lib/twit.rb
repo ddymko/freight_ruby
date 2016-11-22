@@ -34,11 +34,7 @@ class Twit
   def validate_time(tweet)
     current = DateTime.now
     five_past = DateTime.new(current.year, current.month, current.day, current.hour, current.min-5, current.sec, "-05:00")
-    if tweet.created_at.to_time.to_i > five_past.to_time.to_i
-      true
-    else
-      false
-    end
+    tweet.created_at.to_time.to_i > five_past.to_time.to_i ? true : false
   end
 
 end
