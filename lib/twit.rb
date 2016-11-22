@@ -18,7 +18,7 @@ class Twit
       end
 
     end
-    puts array_tweets
+    array_tweets
   end
 
   # Validates to make sure tweet has all matching criteria

@@ -19,9 +19,8 @@ tweet_text = tweets.gather_tweets(train_line, train_number)
 
 twilio = Twil.new(TwilioConfig.client)
 
-puts tweet_text
 
-if  !tweet_text.nil?
+if  !tweet_text.empty?
   twilio.send_message(tweet_text, number)
 end
 
