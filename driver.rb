@@ -8,9 +8,8 @@ require 'twit'
 require 'twil'
 require 'db_data'
 
-
 db = DBData.new(DBConfig.con)
-train_line, train_number = db.user_configs(ARGV[0])
+train_line, train_number = db.user_configs(ARGV[1])
 number = db.user_number(ARGV[0])
 tweets = Twit.new(TwitConfig.client)
 tweet_text = tweets.gather_tweets(train_line, train_number)
